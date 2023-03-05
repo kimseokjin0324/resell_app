@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "728515564979",
+    "firebase_url": "https://chapter06-trade-default-rtdb.firebaseio.com",
+    "project_id": "chapter06-trade",
+    "storage_bucket": "chapter06-trade.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728515564979:android:d90508fb72d3edfbfb27c6",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728515564979-c50grfkepaque6r3l1mvf6pnk7of8q3d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsFv3dgLOVlMNibwHl6-cl-JwImMc_5ok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728515564979-c50grfkepaque6r3l1mvf6pnk7of8q3d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
