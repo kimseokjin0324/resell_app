@@ -10,7 +10,8 @@ import com.example.myapplication.databinding.ItemArticleBinding
 import java.text.SimpleDateFormat
 import java.util.Date
 
-class ArticleAdapter : ListAdapter<ArticleModel, ArticleAdapter.ViewHolder>(diffUtil) {
+class ArticleAdapter(val onItemClicked: (ArticleModel) -> Unit) :
+    ListAdapter<ArticleModel, ArticleAdapter.ViewHolder>(diffUtil) {
 
     inner class ViewHolder(private val binding: ItemArticleBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -23,11 +24,16 @@ class ArticleAdapter : ListAdapter<ArticleModel, ArticleAdapter.ViewHolder>(diff
             binding.titleTextView.text = articleModel.title
             binding.dateTextView.text = format.format(date).toString()
             binding.priceTextView.text = articleModel.price
-            if(articleModel.imageUrl.isNotEmpty())
-            Glide.with(binding.thumbnailImageView)
-                .load(articleModel.imageUrl)
-                .into(binding.thumbnailImageView)
+            if (articleModel.imageUrl.isNotEmpty()) {
+                Glide.with(binding.thumbnailImageView)
+                    .load(articleModel.imageUrl)
+                    .into(binding.thumbnailImageView)
 
+            }
+            //전체를 눌럿을떄
+            binding.root.setOnClickListener {
+                onItemClicked(articleModel)
+            }
         }
     }
 
